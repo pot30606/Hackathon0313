@@ -27,8 +27,9 @@ namespace Hackathon06ReadFile
             {
                 SelectFirstThree obj = new SelectFirstThree();
                 List<string> list = File.ReadAllLines(filename).ToList();
+                //findfirst3 是委派函式 委派找到檔案開頭為695 525的檔案
                 MyPredicate find = findfirst3;
-                var result = obj.DoWhere(list ,find);
+                var result = obj.DoWhere(list ,find); //委派的list傳入 find委派函式 
                 string st_date;
                 string TickNumber;
                 DateTime Flyingday;
